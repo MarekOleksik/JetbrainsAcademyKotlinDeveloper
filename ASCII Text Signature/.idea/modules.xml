@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ASCII_Text_Signature.iml" filepath="$PROJECT_DIR$/.idea/modules/ASCII_Text_Signature.iml" group="ASCII_Text_Signature" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ASCII Text Signature/task/ASCII_Text_Signature-task.iml" filepath="$PROJECT_DIR$/.idea/modules/ASCII Text Signature/task/ASCII_Text_Signature-task.iml" group="ASCII_Text_Signature/ASCII_Text_Signature-task" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ASCII Text Signature/task/ASCII_Text_Signature-task_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ASCII Text Signature/task/ASCII_Text_Signature-task_main.iml" group="ASCII_Text_Signature/ASCII_Text_Signature-task" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ASCII Text Signature/task/ASCII_Text_Signature-task_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ASCII Text Signature/task/ASCII_Text_Signature-task_test.iml" group="ASCII_Text_Signature/ASCII_Text_Signature-task" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Initializing an array of characters/Problems-Initializing_an_array_of_characters.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Initializing an array of characters/Problems-Initializing_an_array_of_characters.iml" group="ASCII_Text_Signature/Problems-Initializing_an_array_of_characters" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Initializing an array of characters/Problems-Initializing_an_array_of_characters_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Initializing an array of characters/Problems-Initializing_an_array_of_characters_main.iml" group="ASCII_Text_Signature/Problems-Initializing_an_array_of_characters" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Initializing an array of characters/Problems-Initializing_an_array_of_characters_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Initializing an array of characters/Problems-Initializing_an_array_of_characters_test.iml" group="ASCII_Text_Signature/Problems-Initializing_an_array_of_characters" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Initializing an array of integers/Problems-Initializing_an_array_of_integers.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Initializing an array of integers/Problems-Initializing_an_array_of_integers.iml" group="ASCII_Text_Signature/Problems-Initializing_an_array_of_integers" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Initializing an array of integers/Problems-Initializing_an_array_of_integers_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Initializing an array of integers/Problems-Initializing_an_array_of_integers_main.iml" group="ASCII_Text_Signature/Problems-Initializing_an_array_of_integers" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Initializing an array of integers/Problems-Initializing_an_array_of_integers_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Initializing an array of integers/Problems-Initializing_an_array_of_integers_test.iml" group="ASCII_Text_Signature/Problems-Initializing_an_array_of_integers" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Swap elements/Problems-Swap_elements.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Swap elements/Problems-Swap_elements.iml" group="ASCII_Text_Signature/Problems-Swap_elements" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Swap elements/Problems-Swap_elements_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Swap elements/Problems-Swap_elements_main.iml" group="ASCII_Text_Signature/Problems-Swap_elements" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Swap elements/Problems-Swap_elements_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Swap elements/Problems-Swap_elements_test.iml" group="ASCII_Text_Signature/Problems-Swap_elements" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/util.iml" filepath="$PROJECT_DIR$/.idea/modules/util/util.iml" group="ASCII_Text_Signature/util" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/util_main.iml" filepath="$PROJECT_DIR$/.idea/modules/util/util_main.iml" group="ASCII_Text_Signature/util" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/util_test.iml" filepath="$PROJECT_DIR$/.idea/modules/util/util_test.iml" group="ASCII_Text_Signature/util" />
+    </modules>
+  </component>
+</project>
