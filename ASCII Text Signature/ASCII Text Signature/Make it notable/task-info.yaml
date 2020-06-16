@@ -247,6 +247,30 @@ files:
         return framed(centeredLines(lines))
     }
   learner_created: false
+- name: src/signature/Main.kt
+  visible: true
+  text: |
+    package signature
+
+    import java.util.*
+
+    val scanner = Scanner(System.`in`)
+
+    fun main() {
+        val name = scanner.nextLine()
+        repeat(name.length + 4) {
+            print("*")
+        }
+        println()
+        println("* $name *")
+        repeat(name.length + 4) {
+            print("*")
+        }
+    }
+  learner_created: true
+- name: src/signature/Letters.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/71/stages/392/implement
 status: Unchecked
 record: -1
