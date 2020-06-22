@@ -39,29 +39,100 @@ fun main() {
             ("z" to listOf("___ ", "  / ", " /__")),
             (" " to listOf("    ", "    ", "    "))
     )
-    repeat(name.length + 4) {
+
+    var lengthOfName = 0
+    for (element in name) {
+        var letter = letters.getValue(element.toString())[0]
+        lengthOfName += letter.length + 1
+    }
+
+    var widthOfTag = 0
+    var countOfSpaces = 0
+    var lineLength = 0
+
+    if (status.length < lengthOfName) {
+        widthOfTag = lengthOfName - status.length + 3
+        countOfSpaces = 2
+        lineLength = lengthOfName + 5
+    } else {
+        widthOfTag = 4
+        lineLength = status.length + 6
+        val temp = lineLength - lengthOfName - 2
+        if (temp % 2 == 0) {
+            countOfSpaces = (temp) / 2
+        } else {
+            countOfSpaces = (temp) / 2 + 1
+        }
+    }
+
+    //println("lineLength: $lineLength")
+    //println("lengthOfName: $lengthOfName")
+    //println("widthOfTag: $widthOfTag")
+    //println("countOfSpaces: $countOfSpaces")
+
+    repeat(lineLength) {
         print("*")
     }
-    print("*  ")
     println()
-    print("*  ")
+
+    print("*")
+    repeat(countOfSpaces) {
+        print(" ")
+    }
     for (element in name) {
         print(letters.getValue(element.toString())[0])
+        print(" ")
     }
+    repeat(lineLength - countOfSpaces - lengthOfName - 2) {
+        print(" ")
+    }
+    print("*")
     println()
-    print("*  ")
+
+    print("*")
+    repeat(countOfSpaces) {
+        print(" ")
+    }
     for (element in name) {
         print(letters.getValue(element.toString())[1])
+        print(" ")
     }
+    repeat(lineLength - countOfSpaces - lengthOfName - 2) {
+        print(" ")
+    }
+    print("*")
     println()
-    print("*  ")
+
+    print("*")
+    repeat(countOfSpaces) {
+        print(" ")
+    }
     for (element in name) {
         print(letters.getValue(element.toString())[2])
+        print(" ")
     }
+    repeat(lineLength - countOfSpaces - lengthOfName - 2) {
+        print(" ")
+    }
+    print("*")
     println()
-    print("*  ")
-    println(status)
-    repeat(name.length + 4) {
+
+    print("*")
+    repeat(widthOfTag / 2) {
+        print(" ")
+    }
+    print(status)
+    repeat(widthOfTag / 2) {
+        print(" ")
+    }
+    if (widthOfTag % 2 == 1) {
+        print(" ")
+    }
+    print("*")
+    println()
+
+    repeat(lineLength) {
         print("*")
     }
 }
+
