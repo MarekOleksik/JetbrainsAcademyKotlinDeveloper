@@ -1,54 +1,56 @@
-package signature
+package signature.signature
 
+import java.io.File
 import java.util.*
 
 val scanner = Scanner(System.`in`)
+const val filePathMedium =
+        "C:\\KotlinProjects\\JetbrainsAcademyKotlinDeveloper\\ASCII Text Signature\\ASCII Text Signature\\medium.txt"
+val fileMedium = File(filePathMedium)
+val scanFileMedium = Scanner(fileMedium)
+const val filePathRoman =
+        "C:\\KotlinProjects\\JetbrainsAcademyKotlinDeveloper\\ASCII Text Signature\\ASCII Text Signature\\roman.txt"
+val fileRoman = File(filePathRoman)
+val scanFileRoman = Scanner(fileRoman)
 
 fun main() {
     print("Enter name and surname: ")
-    val name = scanner.nextLine().toLowerCase()
+    val name = scanner.nextLine()
     print("Enter person's status: ")
     val status = scanner.nextLine()
+    val letters = mutableMapOf<String, List<String>>()
 
-    val letters = mapOf(
-            ("a" to listOf("____", "|__|", "|  |")),
-            ("b" to listOf("___ ", "|__]", "|__]")),
-            ("c" to listOf("____", "|   ", "|___")),
-            ("d" to listOf("___ ", "|  \\", "|__/")),
-            ("e" to listOf("____", "|___", "|___")),
-            ("f" to listOf("____", "|___", "|   ")),
-            ("g" to listOf("____", "| __", "|__]")),
-            ("h" to listOf("_  _", "|__|", "|  |")),
-            ("i" to listOf("_", "|", "|")),
-            ("j" to listOf(" _", " |", "_|")),
-            ("k" to listOf("_  _", "|_/ ", "| \\_")),
-            ("l" to listOf("_   ", "|   ", "|___")),
-            ("m" to listOf("_  _", "|\\/|", "|  |")),
-            ("n" to listOf("_  _", "|\\ |", "| \\|")),
-            ("o" to listOf("____", "|  |", "|__|")),
-            ("p" to listOf("___ ", "|__]", "|   ")),
-            ("q" to listOf("____", "|  |", "|_\\|")),
-            ("r" to listOf("____", "|__/", "|  \\")),
-            ("s" to listOf("____", "[__ ", "___]")),
-            ("t" to listOf("___", " | ", " | ")),
-            ("u" to listOf("_  _", "|  |", "|__|")),
-            ("v" to listOf("_  _", "|  |", " \\/ ")),
-            ("w" to listOf("_ _ _", "| | |", "|_|_|")),
-            ("x" to listOf("_  _", " \\/ ", "_/\\_")),
-            ("y" to listOf("_   _", " \\_/ ", "  |  ")),
-            ("z" to listOf("___ ", "  / ", " /__")),
-            (" " to listOf("    ", "    ", "    "))
-    )
+
+    val numberOfLinesFontMedium = scanFileMedium.nextInt()
+    val numberOfLinesFontRoman = scanFileRoman.nextInt()
+    val numberOfCharactersFontMedium = scanFileMedium.nextInt()
+    val numberOfCharactersFontRoman = scanFileRoman.nextInt()
+    var characterFontMedium: String
+
+    repeat(numberOfCharactersFontMedium) {
+        characterFontMedium = scanFileMedium.next()
+        val widthOfCharacter = scanFileMedium.next()
+        val list = mutableListOf<String>()
+        var temp = scanFileMedium.nextLine()
+
+        repeat(numberOfLinesFontMedium) {
+            temp = scanFileMedium.nextLine()
+            list.add(temp)
+        }
+
+        letters[characterFontMedium] = list
+        letters[" "] = listOf("    ", "    ", "    ")
+    }
 
     var lengthOfName = 0
     for (element in name) {
-        var letter = letters.getValue(element.toString())[0]
+        val letter = letters.getValue(element.toString())[0]
         lengthOfName += letter.length + 1
     }
 
-    var widthOfTag = 0
-    var countOfSpaces = 0
-    var lineLength = 0
+    val widthOfTag: Int
+    val countOfSpaces: Int
+    val lineLength: Int
 
     if (status.length < lengthOfName) {
         widthOfTag = lengthOfName - status.length + 3
@@ -58,17 +60,12 @@ fun main() {
         widthOfTag = 4
         lineLength = status.length + 6
         val temp = lineLength - lengthOfName - 2
-        if (temp % 2 == 0) {
-            countOfSpaces = (temp) / 2
+        countOfSpaces = if (temp % 2 == 0) {
+            (temp) / 2
         } else {
-            countOfSpaces = (temp) / 2 + 1
+            (temp) / 2 + 1
         }
     }
-
-    //println("lineLength: $lineLength")
-    //println("lengthOfName: $lengthOfName")
-    //println("widthOfTag: $widthOfTag")
-    //println("countOfSpaces: $countOfSpaces")
 
     repeat(lineLength) {
         print("*")
